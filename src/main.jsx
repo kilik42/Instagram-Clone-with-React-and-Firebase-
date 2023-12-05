@@ -8,10 +8,13 @@ import { mode } from '@chakra-ui/theme-tools'
 const styles = {
   global: (props) => ({
     body: {
-      bg:mode('gray.50', 'gray.800')(props),
+      bg:mode('gray.100', '#000')(props),
+      color:mode('gray.800', 'whiteAlpha.900')(props),
+
     },
   }),
 }
+
 
 // 2. Add your color mode config
 
@@ -23,7 +26,7 @@ const config = {
 }
 
 // 3. extend the theme
-const theme = extendTheme({ config })
+const theme = extendTheme({ config, styles })
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
